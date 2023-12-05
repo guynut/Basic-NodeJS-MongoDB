@@ -1,0 +1,42 @@
+# extension
+1.Material Icon Theme
+2.indent-rainbow
+3.IntelliCode
+
+
+## First look in NodeJS
+
+1.Run -> npm init (that will -> Create package.jason)
+
+2.  * npm install
+    * npm install Express
+    * npm install nodemon
+    * npm install mongoose
+    * npm install multer
+    * npm install cookie-parser
+    * npm install express-session
+
+3.change some in package.json file
+"scripts": {
+    "start": "nodemon ./bin/www"
+},
+
+So they Can run sever with command "npm start"
+
+### NodeJS with Express and MongoDB
+
+## ======== MongoDB ==========
+MongoDB create folder models to store model for mongoDB
+
+install mongodb-community
+
+`
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew tap mongodb/brew
+brew update
+brew install mongodb-community
+brew services start mongodb/brew/mongodb-community
+`
+
+
+Download Program -> MongoDB compass
