@@ -1,13 +1,15 @@
 const express = require('express')
 const router = express.Router()
+const path = require('path');
+const fs = require('fs');
 
 // Use models
 const Product = require('../models/products')
+const User = require('../models/User')
 
 // UploadFile
 const multer = require('multer')
-const User = require('../models/User')
-const { isNamedExportBindings, NewLineKind } = require('typescript')
+
 // Create Storage
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
@@ -109,7 +111,8 @@ router.post('/insert',upload.single("image"),(req,res)=>{
     let data = new Product({
         name:req.body.name,
         price:req.body.price,
-        image:req.file.filename,
+        // Optional to upload image
+        image: req.file ? req.file.filename : null,
         description:req.body.description
     })
     Product.saveProduct(data,(err)=>{
@@ -134,7 +137,7 @@ router.post('/edit',(req,res)=>{
         res.render('edit',{product:doc,username: req.session.username})
     })
 })
-router.post('/update',(req,res)=>{
+router.post('/update', upload.single('image'),async (req,res)=>{
     // New data from form edit.EJS
     const update_id = req.body.update_id
     let data = {
@@ -142,6 +145,22 @@ router.post('/update',(req,res)=>{
         price:req.body.price,
         description:req.body.description
     }
+
+    if (req.file) {
+        // Save the new image filename to the data object
+        data.image = req.file.filename;
+
+        if (req.body.old_image) {
+            const oldImagePath = path.join(__dirname, '../public/images/products', req.body.old_image);
+            try {
+                await fs.promises.unlink(oldImagePath);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        
+    }
+
     Product.findByIdAndUpdate(update_id,data,{userFindAndModify:false}).exec(err=>{
         res.redirect('/manage')
     })
