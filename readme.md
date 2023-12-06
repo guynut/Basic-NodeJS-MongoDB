@@ -66,7 +66,7 @@ brew services start mongodb/brew/mongodb-community
 
 Download Program to manage with GUI -> MongoDB compass
 
-If use Atlas to connect 
+🟢🟢 If use Atlas to connect 🟢🟢
 
 please set up to atlas before 
 and Add your connection string into your application code IN `dbUrl` in models Folder for each file
