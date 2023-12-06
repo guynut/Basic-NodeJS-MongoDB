@@ -18,6 +18,7 @@ resource: https://drive.google.com/drive/folders/1lxA4JUJisLbmVEbXCb33b28BwkJtdu
    * npm install Express
    * npm install nodemon
    * npm install ejs
+   * npm install mongodb
    * npm install mongoose
    * npm install multer
    * npm install cookie-parser
@@ -64,3 +65,12 @@ brew services start mongodb/brew/mongodb-community
 
 
 Download Program to manage with GUI -> MongoDB compass
+
+If use Atlas to connect 
+
+please set up to atlas before 
+and Add your connection string into your application code IN `dbUrl` in models Folder for each file
+
+``` bash
+'mongodb+srv://guynut:1234@cluster0.unkle3i.mongodb.net/?retryWrites=true&w=majority'
+```
