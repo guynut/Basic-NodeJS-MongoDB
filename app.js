@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = require('./routes/myRouter');
+// Set up cookie for log in
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const app = express();
