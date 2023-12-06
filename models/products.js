@@ -5,7 +5,9 @@ const mongoose = require('mongoose')
 
 // Connect to MongoDB
 const dbUrl = 'mongodb://localhost:27017/productDB'
-mongoose.connect(dbUrl,{
+// If connect to atlas mongoDB
+const dbAtlas = 'mongodb+srv://guynut:1234@cluster0.unkle3i.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(dbAtlas,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).catch(err=>console.log(err))
