@@ -1,4 +1,5 @@
-# Use in final Lab test2 year 2 semester 1 in class -> web Programing
+# final Labtest2 in year 2-1 -> web Programming I
+### NodeJS with Express and MongoDB
 ### extension
 1. Material Icon Theme
 
@@ -9,7 +10,7 @@
 
 ## First look in NodeJS
 
-1. Run -> npm init (that will -> Create package.jason)
+1. Run -> npm init (that will Create -> `package.jason`)
    * npm install
    * npm install Express
    * npm install nodemon
@@ -26,25 +27,36 @@
 },
 ```
 
-So they Can run sever with command "npm start"
-
-### NodeJS with Express and MongoDB
+4. Create JS File to run web -> `index.js`
+   
+So they Can run sever with command `` npm start ``
 
 ## ======== MongoDB ==========
 MongoDB create folder models to store model for mongoDB
 
 ### install mongodb-community
+open your terminal and run this 👇🏻
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+```bash 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-`brew tap mongodb/brew`
+```bash 
+brew tap mongodb/brew
+```
 
-`brew update`
+```bash 
+brew update
+```
 
-`brew install mongodb-community`
+```bash 
+brew install mongodb-community
+```
 
-`brew services start mongodb/brew/mongodb-community`
+```bash 
+brew services start mongodb/brew/mongodb-community
+```
 
 
 
-Download Program -> MongoDB compass
+Download Program to manage with GUI -> MongoDB compass
