@@ -13,6 +13,7 @@
    * npm install
    * npm install Express
    * npm install nodemon
+   * npm install ejs
    * npm install mongoose
    * npm install multer
    * npm install cookie-parser
