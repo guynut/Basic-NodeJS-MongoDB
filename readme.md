@@ -53,6 +53,7 @@ brew update
 brew install mongodb-community
 ```
 
+run mongodb-community
 ```bash 
 brew services start mongodb/brew/mongodb-community
 ```
